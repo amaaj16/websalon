@@ -8,7 +8,9 @@
   padding: 0;
 
 }
-.portada{
+.App-body{
+  margin-top: 60px;
+  padding: 10
 
 }
 
@@ -17,4 +19,20 @@
 }
 .title-nav{
     font-family: Verdana;
+}
+
+.delay{
+  -webkit-animation: mymove 2s infinite;
+  animation: mymove 2s infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes mymove {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
