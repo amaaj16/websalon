@@ -1,0 +1,29 @@
+.contenedor-img {
+  position: fixed;
+  background: #FFEBEE;
+  right: 0;
+  left:0;
+  top:0;
+  bottom: 0;
+  z-index: 900;
+  opacity: 1;
+  visibility: hidden;
+  justify-content: center;
+}
+
+.img-view{
+  position: relative;
+  top: 50%;
+  visibility: hidden;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  background: white;
+}
+.img-close{
+  position: relative;
+  right: 0;
+  height: 20px;
+  width: 20px;
+  background: red;
+}

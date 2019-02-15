@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Container,Row,Col,Card  } from 'react-bootstrap';
-import portada from './assets/fuente-jardin2.jpg';
 import Salon from './assets/Salon.jpg'
 import './Paquetes'
 class Paquetes extends Component{
