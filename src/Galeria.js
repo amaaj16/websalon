@@ -26,6 +26,7 @@ class Galeria extends Component{
          <div style={this.state} className="contenedor-img">
            <div style={this.state} className="img-view">
              <Image src={descarga} thumbnail></Image>
+             <div><button</div>
            </div>
          </div>
        <Container>
