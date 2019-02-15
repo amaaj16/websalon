@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-header {
   height: 100%;
@@ -9,7 +7,7 @@
 
 }
 .App-body{
-  margin-top: 60px;
+  margin-top: 140px;
   padding: 10
 
 }

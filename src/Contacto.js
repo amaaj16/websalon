@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Container,Row,Col  } from 'react-bootstrap';
+import {Container,Row,Col,Form  } from 'react-bootstrap';
 
 class Contacto extends Component{
 
@@ -7,11 +7,25 @@ class Contacto extends Component{
      return (
      <div className="Contacto">
      <Container>
-        <Row>
-        <Col xs={12} md={12} >
-          <p>contacto</p>
-          </Col>
-        </Row>
+       <Form>
+          <Row>
+            <Col>
+              <Form.Group>
+              <Form.Label>Nombre:</Form.Label>
+              <Form.Control type="text"  placeholder="Ingresa Nombre"/>
+              </Form.Group>
+            </Col>
+
+            <Col>
+              <Form.Group>
+              <Form.Label>Email:</Form.Label>
+              <Form.Control type="email" placeholder="Ingresa email"/>
+              </Form.Group>
+            </Col>
+
+          </Row>
+
+       </Form>
      </Container>
    </div>
    )
