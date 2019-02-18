@@ -1,0 +1,12 @@
+.card{
+  width: 100%;
+  margin: auto;
+  border-radius: 1;
+  border-color: red;
+  height: 200px;
+}
+.title{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
