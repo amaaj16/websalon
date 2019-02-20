@@ -7,7 +7,7 @@ class Galeria extends Component{
   constructor(props){
     super(props);
     this.state={
-      items:[Salon,descarga,Salon,Salon,Salon,Salon,Salon,Salon,Salon],
+      items:[descarga,Salon,Salon],
       viewImg:false,
       visibility: 'hidden',
       idItem: ''
@@ -39,7 +39,7 @@ class Galeria extends Component{
        <div className="responsive" key={i}>
          <div className="gallery" key={i}>
            <button  onClick={handleClick.bind(this, item)} className="btn-img" key={i} >
-             <Image src={item} width="10px" key={i}></Image>
+             <Image src={item} key={i}></Image>
            </button>
          </div>
        </div>

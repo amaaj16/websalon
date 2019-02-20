@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import {Container,Row,Col,Card  } from 'react-bootstrap';
 import Salon from './assets/Salon.jpg'
-import './Paquetes'
+import './Paquetes.css'
 class Paquetes extends Component{
 
 
    render(){
      return (
-       <div className="Galeria">
+       <div>
        <Container>
           <Row className="justify-content-md-center">
           <Col md="auto" sx="auto" lg="auto">

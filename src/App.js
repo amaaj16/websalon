@@ -46,9 +46,9 @@ class App extends Component {
               <Nav className="mr-auto ">
                 <Nav.Link href="home">Inicio</Nav.Link>
                 <Nav.Link href="Galeria">Galeria</Nav.Link>
-                <Nav.Link href="Paquetes">Paquetes</Nav.Link>
+                <Nav.Link href="Paquetes">Servicios</Nav.Link>
                 <Nav.Link href="Contacto">Contacto</Nav.Link>
-                <Nav.Link href="Acerca">Acerca de</Nav.Link>
+                <Nav.Link href="Acerca">Nosotros</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>

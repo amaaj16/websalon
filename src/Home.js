@@ -8,7 +8,7 @@ class Home extends Component{
      return (
      <div className="Home">
      <Container>
-          <div className="card">
+          <div className="cardd">
             <div className="title"><h1>El Quijote</h1></div>
             <div>El salon Quijote te da la bienvenida a su portalweb.</div>
           </div>
