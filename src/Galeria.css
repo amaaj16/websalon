@@ -32,53 +32,77 @@
   border: none;
 }
 .btn-img{
+  padding: 0;
+  margin: 0;
   background: transparent;
   border: none;
 }
 
 div.gallery {
-  
+
+  background-color: #FAFAFA;
   display: flex;
+  width: 200px;
+  height: 200px;
   justify-content: center;
+  border-radius: 2px;
+  border: 10px solid #FAFAFA;
 }
 
-div.gallery:hover {
-  border: 1px solid #777;
+div.gallery:hover{
+
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.1),
+  0 6px 20px 0 rgba(0,0,0,.09);
+  -webkit-filter:brightness(95%);
+  filter: brightness(95%);
 }
 
 div.gallery img {
-  width: 100%;
-  height: auto;
+
+
+width: 100%;
+
 }
 
+.contenedor{
+  position: relative;
+  width: 90%;
+  margin: auto;
+  height: 30px;
 
+
+}
 
 .responsive {
-  padding: 10 6px;
+
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px;
   float: left;
-  width: 30%;
+  width: auto;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1240px) {
   .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
+    width: auto;
   }
-  div.gallery {
-    border: none;
-    display: flex;
-    justify-content: center;
+
+  div.gallery img {
+    width: 100%;
   }
+
 }
 
 @media only screen and (max-width: 500px) {
   .responsive {
     width: 100%;
+    margin: auto;
+    float: none;
   }
   div.gallery {
+    width: 300px;
+    height: 300px;
     border: none;
-    display: flex;
-    justify-content: center;
   }
 
 }
