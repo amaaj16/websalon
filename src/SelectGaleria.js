@@ -9,7 +9,7 @@ class SelectGaleria extends Component{
   constructor(props){
     super(props);
     this.state={
-      concepto:props.concepto,
+
       visibility: 'visible',
       albums:[
         {
