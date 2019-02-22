@@ -7,6 +7,7 @@ class Galeria extends Component{
   constructor(props){
     super(props);
     this.state={
+      concepto:props.concepto,
       items:[descarga,Salon,descarga,Salon,descarga,Salon,Salon,descarga,Salon,Salon],
       viewImg:false,
       visibility: 'hidden',
@@ -50,6 +51,7 @@ class Galeria extends Component{
  }
      return (
        <div className="Galeria">
+         <p>{this.state.concepto}</p>
          <div style={this.state} className="contenedor-img">
            <div style={this.state} className="img-view">
              <Image src={this.state.idItem}  thumbnail></Image>

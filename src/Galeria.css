@@ -79,7 +79,8 @@ div.album:hover{
 
 div.gallery:hover{
 
-
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.1),
+  0 6px 20px 0 rgba(0,0,0,.09);
   -webkit-filter:brightness(95%);
   filter: brightness(95%);
 }

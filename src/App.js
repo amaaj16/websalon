@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import { Navbar,Nav} from 'react-bootstrap';
-
+import Routing from './Routing.js';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
-import Home from './Home.js';
 
-import Paquetes from './Paquetes.js';
-import Contacto from './Contacto.js';
-import Acerca from './Acerca.js';
 import Loader from './Loader.js';
-import SelectGaleria from './SelectGaleria.js';
+
 import './App.css';
 
 class App extends Component {
@@ -55,12 +51,8 @@ class App extends Component {
           </Navbar>
           </div>
           <div className="App-body">
-          <Switch>
-          <Route path="/home" component={Home_page}/>
-          <Route path="/Galeria" component={SelectGaleria_page}/>
-          <Route path="/Paquetes" component={Paquetes_page}/>
-          <Route path="/Contacto" component={Contacto_page}/>
-          <Route path="/Acerca" component={Acerca_page}/>
+          <Switch >
+          <Routing/>
           </Switch>
           </div>
         </div>
@@ -78,21 +70,5 @@ const changeState = () =>{
   })
 }
 
-const Home_page = ({match}) => (
-  <Home/>
-)
 
-const SelectGaleria_page=({match}) =>(
-  <SelectGaleria/>
-)
-
-const Paquetes_page=({match}) =>(
-  <Paquetes/>
-)
-const Contacto_page=({match}) =>(
-  <Contacto/>
-)
-const Acerca_page=({match}) =>(
-  <Acerca/>
-)
 export default App;

@@ -1,5 +1,5 @@
 import React, { Component, } from 'react';
-import Galeria from './Galeria.js';
+
 import {BrowserRouter as Router,Route,Switch,Link} from 'react-router-dom';
 import {Container,Image} from 'react-bootstrap';
 import boda from './assets/boda.jpg';
@@ -9,35 +9,42 @@ class SelectGaleria extends Component{
   constructor(props){
     super(props);
     this.state={
+      concepto:props.concepto,
+      visibility: 'visible',
       albums:[
         {
           name:'Bodas',
           photo:boda,
-          to:'/Galeria/boda'
+          to:'/Galer/boda'
       },
       {
         name:'XVs',
         photo:xv,
-        to:'/Galeria/xv'
+        to:'/Galer/xv'
 
       }]
     }
   }
+  showHide(){
+    this.setState({visibility:'hidden'});
+  }
+
   render(){
+    const showHide = this.showHide;
     function ViewAlbums (props){
       const albumsD = props.albumsI;
       const lstAlbums = albumsD.map((album,i)=>(
         <Link to={album.to} key={i}>
         <div className="responsive">
           <div className="album">
-            <Image src={album.photo}></Image>
+            <Image src={album.photo} ></Image>
             <div className="titleAlbum">
               <h5>{album.name}</h5>
             </div>
           </div>
         </div>
 
-        </Link>
+      </Link>
 
 
 
@@ -45,27 +52,15 @@ class SelectGaleria extends Component{
       return (<Container>{lstAlbums}</Container>)
 }
 
-function Routing (props){
-  const albumsD = props.albumsI;
-  const rut = albumsD.map((album,i)=>(
 
-      <Route path={album.to} component={Galeria_page}/>
-
-  ))
-  return (<Switch>{rut}</Switch>)
-}
     return (
-      <Router>
+      <Route>
         <ViewAlbums albumsI={this.state.albums}/>
-        <Routing albumsI={this.state.albums}/>
-      </Router>
+      </Route>
     )
   }
 }
 
 
-const Galeria_page = ({match})=>(
-  <Galeria/>
 
-)
 export default SelectGaleria;
