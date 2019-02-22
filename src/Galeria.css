@@ -48,20 +48,44 @@ div.gallery {
   border-radius: 2px;
   border: 10px solid #FAFAFA;
 }
+div.album {
+  background-color: #FAFAFA;
+  display: block;
+  width: auto;
+  height: 271px;
+  border-radius: 2px;
+  border: 10px solid #FAFAFA;
+}
+div.album img {
+width: 250px;
+height: 160px;
+
+}
+div.titleAlbum{
+  background-color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+h5{
+  font-size: 1.25em;
+  margin: 0;
+}
+
+div.album:hover{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.1),
+  0 6px 20px 0 rgba(0,0,0,.09);
+}
 
 div.gallery:hover{
 
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,.1),
-  0 6px 20px 0 rgba(0,0,0,.09);
+
   -webkit-filter:brightness(95%);
   filter: brightness(95%);
 }
 
 div.gallery img {
-
-
 width: 100%;
-
 }
 
 .contenedor{
@@ -74,7 +98,6 @@ width: 100%;
 }
 
 .responsive {
-
   display: flex;
   justify-content: center;
   padding: 10px 10px;
@@ -83,16 +106,24 @@ width: 100%;
 }
 
 @media only screen and (max-width: 1240px) {
-  .responsive {
-    width: auto;
-  }
 
   div.gallery img {
     width: 100%;
   }
 
 }
+@media only screen and (max-width: 800px) {
+  div.album img {
+  width: 210px;
+  height: 140px;
 
+  }
+  div.album {
+    height: 251px;
+  }
+
+
+}
 @media only screen and (max-width: 500px) {
   .responsive {
     width: 100%;
