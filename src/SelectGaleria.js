@@ -49,7 +49,7 @@ function Routing (props){
   const albumsD = props.albumsI;
   const rut = albumsD.map((album,i)=>(
 
-      <Route path={album.to} component="Galeria_page"/>
+      <Route path={album.to} component={Galeria_page}/>
 
   ))
   return (<Switch>{rut}</Switch>)
