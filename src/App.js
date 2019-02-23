@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Navbar,Nav,Image} from 'react-bootstrap';
 import Routing from './Routing.js';
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import {BrowserRouter as Router,Route,Switch,Redirect} from 'react-router-dom';
 import logo1 from './assets/logo1.jpg';
+import Home from './Home.js';
 import Loader from './Loader.js';
 
 import './App.css';
@@ -30,6 +31,7 @@ class App extends Component {
         return(
           <Loader type="spin" color="#2196F3" />
 
+
         )
       }else {
         return (
@@ -51,7 +53,11 @@ class App extends Component {
           </Navbar>
           </div>
           <div className="App-body">
-          <Routing/>
+            <Switch location={this.props.location}>
+              <Redirect from="/" to="/home"  exact/>
+              <Routing/>
+            </Switch>
+
           </div>
         </div>
 
@@ -67,6 +73,8 @@ const changeState = () =>{
     setTimeout(resolve,1000)
   })
 }
-
+const Home_page = ({match}) => (
+  <Home/>
+)
 
 export default App;

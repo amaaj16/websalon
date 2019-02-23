@@ -6,3 +6,10 @@
   margin: auto;
   text-align: center;
 }
+div.datos img{
+  position: relative;
+  width: 15px;
+  height: 15px;
+  margin-top: 6px;
+  margin-right: 15px;
+}

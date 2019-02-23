@@ -9,7 +9,7 @@ class Paquetes extends Component{
      return (
        <div>
        <Container>
-          <Row className="justify-content-md-center">
+      <Row>
           <Col md="auto" sx="auto" lg="auto">
           <Card  className="card">
             <Card.Img variant="top" src={Salon}/>
@@ -18,14 +18,27 @@ class Paquetes extends Component{
                 <Card.Text>
                   Some quick example text to build on the card title and make up the bulk of
                   the card's content.
+                  Some quick example text to build on the card title and make up the bulk of
+                  the card's content.
+                  Some quick example text to build on the card title and make up the bulk of
+                  the card's content.
+                  Some quick example text to build on the card title and make up the bulk of
+                  the card's content.
+                  Some quick example text to build on the card title and make up the bulk of
+                  the card's content.
+                  Some quick example text to build on the card title and make up the bulk of
+                  the card's content.
+                  Some quick example text to build on the card title and make up the bulk of
+                  the card's content.
+                  Some quick example text to build on the card title and make up the bulk of
+                  the card's content.
                 </Card.Text>
             </Card.Body>
           </Card>
+          <br></br>
+          <br></br>
         </Col>
-          </Row>
-          <br></br>
-          <br></br>
-          <Row className="justify-content-md-center">
+
           <Col md="auto" lg="auto">
           <Card className="card">
             <Card.Img variant="top" src={Salon}/>
@@ -37,11 +50,10 @@ class Paquetes extends Component{
                 </Card.Text>
             </Card.Body>
           </Card>
+          <br></br>
+          <br></br>
           </Col>
-          </Row>
-          <br></br>
-          <br></br>
-          <Row className="justify-content-md-center">
+
           <Col md="auto" lg="auto">
           <Card className="card">
             <Card.Img variant="top" src={Salon}/>
@@ -53,8 +65,10 @@ class Paquetes extends Component{
                 </Card.Text>
             </Card.Body>
           </Card>
+          <br></br>
+          <br></br>
           </Col>
-          </Row>
+</Row>
        </Container>
        </div>
    )

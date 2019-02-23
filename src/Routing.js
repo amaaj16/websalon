@@ -33,11 +33,11 @@ const Galeria_page = ({match})=>(
 )
 const routes = [
   {
-    path:'/home',
+    path:'/home/',
     component:Home_page
   },
   {
-    path:'/Galeria',
+    path:'/Galeria/',
     component:SelectGaleria_page,
   },
       {
@@ -46,15 +46,15 @@ const routes = [
 
       },
   {
-    path:'/Paquetes',
+    path:'/Paquetes/',
     component:Paquetes_page
   },
   {
-    path:'/Contacto',
+    path:'/Contacto/',
     component:Contacto_page
   },
   {
-    path:'/Acerca',
+    path:'/Acerca/',
     component:Acerca_page
   }
 ];

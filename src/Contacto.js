@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import {Container,Row,Col,Form,Button  } from 'react-bootstrap';
+import {Container,Row,Col,Form,Button,Image  } from 'react-bootstrap';
+import telefono from './assets/llamar.svg';
+import email from './assets/mensaje.svg';
+import ubicacion from './assets/marcador-de-posicion.svg';
 import './Contacto.css';
 class Contacto extends Component{
 
@@ -33,9 +36,19 @@ class Contacto extends Component{
 
        <Col lg={{span: 5, offset:2}}>
         <div className="datos">
-        <p>55-55-55-55-55</p>
-        <p>elquijote@gmail.com</p>
-        <p>Zapopan 52 Col. Virgencitas 57300 Edo. Mex.</p>
+          <Row>
+            <Image src={telefono}/>
+            <p>55-55-55-55-55</p>
+          </Row>
+          <Row>
+            <Image src={email}/>
+            <p>elquijote@gmail.com</p>
+          </Row>
+          <Row>
+            <Image src={ubicacion}/>
+              <p>Zapopan 52 Col. Virgencitas 57300 Edo. Mex.</p>
+          </Row>
+
         </div>
        </Col>
       </Row>

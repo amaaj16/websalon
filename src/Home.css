@@ -6,11 +6,7 @@
   border-color: red;
   height: 200px;
 }
-.title{
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
+
 
 .logo{
   width:100%;

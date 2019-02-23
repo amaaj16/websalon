@@ -17,7 +17,11 @@
 .title-nav{
     font-family: Verdana;
 }
-
+.title{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
 .delay{
   -webkit-animation: mymove 2s infinite;
   animation: mymove 2s infinite;

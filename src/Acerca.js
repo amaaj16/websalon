@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Container,Row,Col  } from 'react-bootstrap';
+import {Container,Row,Col,Image  } from 'react-bootstrap';
+import logo2 from './assets/logo2.jpg';
 class Acerca extends Component{
 
    render(){
@@ -8,9 +9,9 @@ class Acerca extends Component{
      <Container>
         <Row>
         <Col xs={12} md={12} >
-        <p>El Quijote</p>
-        <p>Salon de eventos sociales</p>
-          <p>Somos una empresa dedicada e realizar eventos sociales de alta vanguardia,con la mejor calidad en
+        <div className="title"><Image src={logo2}/></div>
+        <div className="title"><h4>Salon de eventos sociales</h4></div>
+          <p>Somos una empresa dedicada a realizar eventos sociales de alta vanguardia,con la mejor calidad en
           en nuestros servicios, los años de esperiecia respaldan nuestro trabajo.</p>
           </Col>
         </Row>
