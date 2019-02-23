@@ -11,3 +11,12 @@
   display: flex;
   justify-content: center;
 }
+
+.logo{
+  width:100%;
+  height: auto;
+}
+.contenedor-video{
+  width: auto;
+  height: 100%;
+}

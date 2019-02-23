@@ -6,6 +6,7 @@ import Paquetes from './Paquetes.js';
 import Contacto from './Contacto.js';
 import Acerca from './Acerca.js';
 import Galeria from './Galeria.js';
+
 const Home_page = ({match}) => (
   <Home/>
 )
@@ -40,8 +41,9 @@ const routes = [
     component:SelectGaleria_page,
   },
       {
-        path:'/Galer/:id',
+        path:'/e:id',
         component:Galeria_page
+
       },
   {
     path:'/Paquetes',

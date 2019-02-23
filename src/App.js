@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Navbar,Nav} from 'react-bootstrap';
+import { Navbar,Nav,Image} from 'react-bootstrap';
 import Routing from './Routing.js';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
-
+import logo1 from './assets/logo1.jpg';
 import Loader from './Loader.js';
 
 import './App.css';
@@ -37,7 +37,7 @@ class App extends Component {
         <div className="App">
           <div className="App-header">
           <Navbar  fixed="top" bg="light" expand="md" >
-            <Navbar.Brand href="home" className="title-nav">El Quijote</Navbar.Brand>
+            <Navbar.Brand href="home" className="title-nav"><Image src={logo1} width="200px"/></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto ">
@@ -51,9 +51,7 @@ class App extends Component {
           </Navbar>
           </div>
           <div className="App-body">
-          <Switch >
           <Routing/>
-          </Switch>
           </div>
         </div>
 

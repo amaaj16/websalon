@@ -15,12 +15,13 @@ class SelectGaleria extends Component{
         {
           name:'Bodas',
           photo:boda,
-          to:'/Galer/boda'
+          to:'/eboda'
+
       },
       {
         name:'XVs',
         photo:xv,
-        to:'/Galer/xv'
+        to:'/exv'
 
       }]
     }
@@ -34,7 +35,7 @@ class SelectGaleria extends Component{
     function ViewAlbums (props){
       const albumsD = props.albumsI;
       const lstAlbums = albumsD.map((album,i)=>(
-        <Link to={album.to} key={i}>
+        <Link to={album.to} key={i} replace >
         <div className="responsive">
           <div className="album">
             <Image src={album.photo} ></Image>
@@ -54,9 +55,9 @@ class SelectGaleria extends Component{
 
 
     return (
-      <Route>
+
         <ViewAlbums albumsI={this.state.albums}/>
-      </Route>
+
     )
   }
 }
