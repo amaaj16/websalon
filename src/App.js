@@ -4,6 +4,7 @@ import Routing from './Routing.js';
 import {BrowserRouter as Router,Route,Switch,Redirect} from 'react-router-dom';
 import logo1 from './assets/logo1.jpg';
 import Home from './Home.js';
+//import {Provider} from 'react-redux';
 import Loader from './Loader.js';
 
 import './App.css';
@@ -38,7 +39,7 @@ class App extends Component {
         <Router>
         <div className="App">
           <div className="App-header">
-          <Navbar  fixed="top" bg="light" expand="md" >
+          <Navbar  fixed="top" bg="dark" variant="dark" expand="md" >
             <Navbar.Brand href="home" className="title-nav"><Image src={logo1} width="200px"/></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

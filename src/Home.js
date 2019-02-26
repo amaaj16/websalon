@@ -10,9 +10,8 @@ class Home extends Component{
    render(){
      return (
      <div className="Home">
+       <div className="title"><h1>Welcome</h1></div>
      <Container>
-          <div className="cardd">
-
             <div className="contenedor-video">
               <Player  autoPlay playsInline poster={logo2} src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4">
                 <ControlBar autoHide={true} disableDefaultControls={false}>
@@ -20,7 +19,6 @@ class Home extends Component{
                 </ControlBar>
               </Player>
             </div>
-        </div>
      </Container> </div>
    )
    }

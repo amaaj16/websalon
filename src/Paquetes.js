@@ -7,10 +7,12 @@ class Paquetes extends Component{
 
    render(){
      return (
-       <div>
-       <Container>
+       <div className="paquetes">
+       <div className="title"><h1>Tittle</h1></div> 
+       <div><p>Some quick example text to build on the card title and make up the bulk of
+       the card's content.</p> </div>
       <Row>
-          <Col md="auto" sx="auto" lg="auto">
+          <Col md="auto" xs="auto" lg="auto">
           <Card  className="card">
             <Card.Img variant="top" src={Salon}/>
             <Card.Body>
@@ -18,41 +20,27 @@ class Paquetes extends Component{
                 <Card.Text>
                   Some quick example text to build on the card title and make up the bulk of
                   the card's content.
-                  Some quick example text to build on the card title and make up the bulk of
-                  the card's content.
-                  Some quick example text to build on the card title and make up the bulk of
-                  the card's content.
-                  Some quick example text to build on the card title and make up the bulk of
-                  the card's content.
-                  Some quick example text to build on the card title and make up the bulk of
-                  the card's content.
-                  Some quick example text to build on the card title and make up the bulk of
-                  the card's content.
-                  Some quick example text to build on the card title and make up the bulk of
-                  the card's content.
-                  Some quick example text to build on the card title and make up the bulk of
-                  the card's content.
+
                 </Card.Text>
             </Card.Body>
           </Card>
           <br></br>
           <br></br>
         </Col>
-
-          <Col md="auto" lg="auto">
-          <Card className="card">
-            <Card.Img variant="top" src={Salon}/>
-            <Card.Body>
-                <Card.Title> Paquete 2</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the bulk of
-                  the card's content.
-                </Card.Text>
-            </Card.Body>
-          </Card>
-          <br></br>
-          <br></br>
-          </Col>
+        <Col md="auto" lg="auto">
+        <Card className="card">
+          <Card.Img variant="top" src={Salon}/>
+          <Card.Body>
+              <Card.Title> Paquete 2</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up the bulk of
+                the card's content.
+              </Card.Text>
+          </Card.Body>
+        </Card>
+        <br></br>
+        <br></br>
+        </Col>
 
           <Col md="auto" lg="auto">
           <Card className="card">
@@ -69,7 +57,7 @@ class Paquetes extends Component{
           <br></br>
           </Col>
 </Row>
-       </Container>
+
        </div>
    )
    }

@@ -55,9 +55,10 @@ class SelectGaleria extends Component{
 
 
     return (
-
+        <Container>
+        <div className="title"><h1>Galeria</h1></div>
         <ViewAlbums albumsI={this.state.albums}/>
-
+</Container>
     )
   }
 }
