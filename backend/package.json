@@ -1,0 +1,14 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "api que servira al frontend de sitio web el quijote",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Alejandro Aviña",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
