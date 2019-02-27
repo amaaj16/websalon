@@ -3,16 +3,16 @@ from django.http import HttpResponse, HttpRequest
 from pymongo import MongoClient
 # Create your views here.
 
-
+client = MongoClient("mongodb+srv://amaaj16:amaaj16@cluster0-s1gai.mongodb.net/test?retryWrites=true")
+db = client.elquijote_db
+collection = db.users
 def index(request):
-	client =MongoClient('localhost',27017)
-	db = client.local_db
-	tets = db.users
+
 
 	user = {
 	"name":"admin",
 	"pass":"pass"
 	}
 
-	tets.instert_one(user)
+	id_user = collection.insert_one(user).inserted_id
 	return HttpResponse("user_id")
