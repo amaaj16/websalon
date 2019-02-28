@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Navbar,Nav,Image} from 'react-bootstrap';
 import Routing from './Routing.js';
+import {Provider} from 'react-redux';
 import {BrowserRouter as Router,Route,Switch,Redirect} from 'react-router-dom';
 import logo1 from './assets/logo1.jpg';
 import Home from './Home.js';
+import store from './redux/store.js'
 //import {Provider} from 'react-redux';
 import Loader from './Loader.js';
 
@@ -36,7 +38,8 @@ class App extends Component {
         )
       }else {
         return (
-        <Router>
+
+
         <div className="App">
           <div className="App-header">
           <Navbar  fixed="top" bg="dark" variant="dark" expand="md" >
@@ -54,15 +57,19 @@ class App extends Component {
           </Navbar>
           </div>
           <div className="App-body">
-            <Switch location={this.props.location}>
-              <Redirect from="/" to="/home"  exact/>
+            <Provider store={store}>
+              <Router>
+            <Switch>
               <Routing/>
+              <Redirect from="/" to="/home"  exact/>
             </Switch>
-
+            </Router>
+            </Provider>
           </div>
         </div>
 
-        </Router>
+
+
       )
       }
 

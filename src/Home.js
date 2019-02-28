@@ -4,10 +4,13 @@ import portada from './assets/fuente-jardin2.jpg';
 import { Player,ControlBar,PlayToggle } from 'video-react';
 import "./Home.css";
 import logo2 from './assets/logo2.jpg';
+import {connect} from 'react-redux';
 import "../node_modules/video-react/dist/video-react.css";
 class Home extends Component{
 
    render(){
+     const {album} = this.props;
+     console.log(this.props);
      return (
      <div className="Home">
        <div className="title"><h1>Welcome</h1></div>
@@ -23,4 +26,11 @@ class Home extends Component{
    )
    }
 }
-export default Home;
+
+const mapStateToProps = (state) =>{
+  return {
+    album : state.album,
+    hola:"hellow"
+  };
+}
+export default connect(mapStateToProps)(Home);
