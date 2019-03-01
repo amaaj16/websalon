@@ -14,15 +14,14 @@
 }
 .contenedor-video{
   width: 100%;
-  height: auto;
 }
-
-@font-face {
-  font-family: "Mystery Quest";
-  src: url("WhiteAngelica.ttf");
+.fixrow{
+  margin: 0 !important;
 }
-
-h1 {
-  font-family: "Mystery Quest", cursive;
-  font-size: 150%;
+.fixcol{
+  padding: 0 !important;
+}
+.portada{
+  width: 100%;
+  max-height: 500px;
 }

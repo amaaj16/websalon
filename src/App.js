@@ -43,7 +43,7 @@ class App extends Component {
         <div className="App">
           <div className="App-header">
           <Navbar  fixed="top" bg="dark" variant="dark" expand="md" >
-            <Navbar.Brand href="home" className="title-nav"><Image src={logo1} width="200px"/></Navbar.Brand>
+            <Navbar.Brand href="home" className="title-nav"><p className="logotitle">El Quijote</p></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto ">
@@ -60,8 +60,9 @@ class App extends Component {
             <Provider store={store}>
               <Router>
             <Switch>
-              <Routing/>
+
               <Redirect from="/" to="/home"  exact/>
+              <Routing/>
             </Switch>
             </Router>
             </Provider>

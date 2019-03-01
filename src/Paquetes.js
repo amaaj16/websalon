@@ -8,7 +8,7 @@ class Paquetes extends Component{
    render(){
      return (
        <div className="paquetes">
-       <div className="title"><h1>Tittle</h1></div> 
+       <div className="title"><h1>Servicios</h1></div>
        <div><p>Some quick example text to build on the card title and make up the bulk of
        the card's content.</p> </div>
       <Row>
@@ -16,7 +16,7 @@ class Paquetes extends Component{
           <Card  className="card">
             <Card.Img variant="top" src={Salon}/>
             <Card.Body>
-                <Card.Title> Paquete 1</Card.Title>
+                <Card.Title><h5>Paquete 1</h5></Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up the bulk of
                   the card's content.
@@ -31,7 +31,7 @@ class Paquetes extends Component{
         <Card className="card">
           <Card.Img variant="top" src={Salon}/>
           <Card.Body>
-              <Card.Title> Paquete 2</Card.Title>
+              <Card.Title> <h5>Paquete 2</h5></Card.Title>
               <Card.Text>
                 Some quick example text to build on the card title and make up the bulk of
                 the card's content.
@@ -46,7 +46,7 @@ class Paquetes extends Component{
           <Card className="card">
             <Card.Img variant="top" src={Salon}/>
             <Card.Body>
-                <Card.Title> Paquete 3</Card.Title>
+                <Card.Title><h5> Paquete 3</h5></Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up the bulk of
                   the card's content.

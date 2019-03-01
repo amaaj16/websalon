@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {Container,Image,Row,Col  } from 'react-bootstrap';
-import portada from './assets/fuente-jardin2.jpg';
+
 import { Player,ControlBar,PlayToggle } from 'video-react';
 import "./Home.css";
-import logo2 from './assets/logo2.jpg';
+import portada from './assets/portada.jpg';
 import {connect} from 'react-redux';
 import "../node_modules/video-react/dist/video-react.css";
 class Home extends Component{
@@ -13,20 +13,27 @@ class Home extends Component{
      console.log(this.props);
      return (
      <div className="Home">
-       <div className="title"><h1>Welcome</h1></div>
-     <Container>
+       <div>
+       <Row className="fixrow">
+         <Col lg="12" md="12" className="fixcol">
             <div className="contenedor-video">
-              <Player  autoPlay playsInline poster={logo2} src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4">
-                <ControlBar autoHide={true} disableDefaultControls={false}>
-                  <PlayToggle />
-                </ControlBar>
-              </Player>
+              <Image src={portada} className="portada"/>
             </div>
-     </Container> </div>
+            </Col>
+        </Row>
+        </div>
+          <div className="Welcome"><h1>Welcome</h1></div>
+     </div>
    )
    }
 }
-
+/*
+<Player  autoPlay playsInline poster={logo2} src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4">
+  <ControlBar autoHide={true} disableDefaultControls={true}>
+    <PlayToggle />
+  </ControlBar>
+</Player>
+*/
 const mapStateToProps = (state) =>{
   return {
     album : state.album,
