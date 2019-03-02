@@ -1,6 +1,7 @@
 'use strict'
 var express = require('express');
 var bodyParser=require('body-parser');
+var mongoose = require('mongoose');
 var app = express();
 const port = process.env.PORT || 3000
 
@@ -18,16 +19,17 @@ app.use('/user/:id', function (req, res, next) {
 });
 
 app.get('/user/:id', function (req, res, next) {
-  res.send('USER');
+  console.log(req.params);
+  res.status(200).send({user:'alex'})
 });
 
-app.get('/', (req, res) =>{
-  res.json(respuesta);
-});
-const respuesta = {
-  name: "ok",
-  title: "page"
-}
+
+
+mongoose.connect('mongodb+srv://amaaj16:egZYxuHRJXcWbzbN@cluster0-s1gai.mongodb.net/elquijote_db?retryWrites=true',(err,res)=>{
+  if(err) throw err
+  console.log("conexion establecida con la base de datos");
+})
+
 app.listen(port,()=> {
   console.log(`Example app listening on port ${port}!`);
 });
