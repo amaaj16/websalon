@@ -2,7 +2,6 @@
   "name": "websalon",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://elquijote-46280.firebaseapp.com",
   "dependencies": {
     "bootstrap": "^4.3.0",
     "jquery": "^3.3.1",
