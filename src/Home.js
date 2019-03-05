@@ -17,7 +17,7 @@ class Home extends Component{
        <Row className="fixrow">
          <Col lg="12" md="12" className="fixcol">
             <div className="contenedor-video">
-              <Image src={portada} className="portada"/>
+              <Image src={portada} className="portada" />
             </div>
             </Col>
         </Row>
