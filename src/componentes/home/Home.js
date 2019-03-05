@@ -10,7 +10,9 @@ class Home extends Component{
     return (
       <Fragment>
       <App/>
+      <div className="body">
       <Page/>
+      </div>
       </Fragment>
     );
   }
@@ -18,7 +20,7 @@ class Home extends Component{
 }
 const mapStateToProps = (state) =>{
   return {
-    album : state.album,
+    album : [{name:"album1"},{name:"album2"}],
     hola:"hellow"
   };
 }

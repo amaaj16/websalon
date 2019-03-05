@@ -1,10 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component,Fragment } from 'react';
 import {Container,Row,Col,Image  } from 'react-bootstrap';
-import page from './page.js';
+import Page from './page.js';
+import App from '../header/App.js'
 class Acerca extends Component{
   render(){
     return(
-      <page/>
+      <Fragment>
+      <App/>
+      <div className="body">
+      <Page/>
+      </div>
+      </Fragment>
     );
 
   }

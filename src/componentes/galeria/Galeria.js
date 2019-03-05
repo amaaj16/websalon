@@ -1,7 +1,8 @@
-import React, { Component, } from 'react';
+import React, { Component,Fragment } from 'react';
 import {Container,Image} from 'react-bootstrap';
 import descarga from '../../assets/descarga.png';
-import Salon from '../../assets/Salon.jpg'
+import Salon from '../../assets/Salon.jpg';
+import App from '../header/App.js'
 import "./Galeria.css";
 class Galeria extends Component{
   constructor(props){
@@ -50,6 +51,9 @@ class Galeria extends Component{
    return (<Container>{listImg}</Container>);
  }
      return (
+       <Fragment>
+       <App/>
+       <div className="body">
        <div className="Galeria">
          <p>{this.state.concepto}</p>
          <div style={this.state} className="contenedor-img">
@@ -63,6 +67,8 @@ class Galeria extends Component{
 
 
      </div>
+   </div>
+     </Fragment>
    )
    }
 }

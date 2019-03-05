@@ -1,6 +1,6 @@
 import React from "react";
 import { Route} from "react-router-dom";
-import SelectGaleria from './componentes/selectgaleria/SelectGaleria.js';
+import Albums from './componentes/selectgaleria/index.js';
 import Home from './componentes/home/Home.js';
 import Paquetes from './componentes/paquetes/Paquetes.js';
 import Contacto from './componentes/contacto/Contacto.js';
@@ -11,8 +11,8 @@ const Home_page = ({match}) => (
   <Home/>
 )
 
-const SelectGaleria_page=({match}) =>(
-  <SelectGaleria/>
+const Albums_page=({match}) =>(
+  <Albums/>
 )
 
 const Paquetes_page=({match}) =>(
@@ -38,7 +38,7 @@ const routes = [
   },
   {
     path:'/Galeria/',
-    component:SelectGaleria_page,
+    component:Albums_page,
   },
       {
         path:'/e:id',

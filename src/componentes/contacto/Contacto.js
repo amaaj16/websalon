@@ -6,7 +6,9 @@ class Contacto extends Component{
     return(
       <Fragment>
       <App/>
+      <div className="body">
       <Page/>
+      </div>
       </Fragment>
     )
   }

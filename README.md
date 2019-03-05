@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 se agrega al packege.jon para subir a produccion
-### "homepage": "https://elquijote-46280.firebaseapp.com",
+ "homepage": "https://elquijote-46280.firebaseapp.com",
 ## Available Scripts
 
 In the project directory, you can run:

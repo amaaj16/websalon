@@ -12,11 +12,11 @@ import store from './redux/store.js';
 const Root = (
   <Provider store={store}>
     <Router basename="/salon">
-  <Switch>
-    <Redirect from="/" to="/home"  exact/>
-    <Routing/>
-  </Switch>
-  </Router>
+      <Switch>
+        <Redirect from="/" to="/home"  exact/>
+        <Routing/>
+      </Switch>
+    </Router>
   </Provider>
 )
 ReactDOM.render(Root, document.getElementById('root'));

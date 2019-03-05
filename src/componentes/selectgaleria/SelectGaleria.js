@@ -1,39 +1,12 @@
-import React, { Component, } from 'react';
+import React, { Component,Fragment } from 'react';
 
-import {BrowserRouter as Router,Route,Switch,Link} from 'react-router-dom';
-import {Container,Image} from 'react-bootstrap';
-import boda from '../../assets/boda.jpg';
-import xv from '../../assets/xvs.jpg';
+import {Link} from 'react-router-dom';
+import {Image} from 'react-bootstrap';
+
 import "../galeria/Galeria.css";
-class SelectGaleria extends Component{
-  constructor(props){
-    super(props);
-    this.state={
-
-      visibility: 'visible',
-      albums:[
-        {
-          name:'Bodas',
-          photo:boda,
-          to:'/eboda'
-
-      },
-      {
-        name:'XVs',
-        photo:xv,
-        to:'/exv'
-
-      }]
-    }
-  }
-  showHide(){
-    this.setState({visibility:'hidden'});
-  }
-
-  render(){
-    const showHide = this.showHide;
-    function ViewAlbums (props){
-      const albumsD = props.albumsI;
+function SelectGaleria(props){
+      console.log(props.al.albums);
+      const albumsD = props.al.albums;
       const lstAlbums = albumsD.map((album,i)=>(
         <Link to={album.to} key={i} replace >
         <div className="responsive">
@@ -49,20 +22,13 @@ class SelectGaleria extends Component{
 
 
 
-      ))
-      return (<Container>{lstAlbums}</Container>)
-}
-
-
+    ));
     return (
-        <Container>
-        <div className="title"><h1>Galeria</h1></div>
-        <ViewAlbums albumsI={this.state.albums}/>
-</Container>
-    )
+      <Fragment>
+      <div className="title"><h1>Galeria</h1></div>
+      <div>{lstAlbums}</div>
+      </Fragment>
+    );
   }
-}
-
-
 
 export default SelectGaleria;
