@@ -58,7 +58,7 @@ class App extends Component {
           </div>
           <div className="App-body">
             <Provider store={store}>
-              <Router>
+              <Router basename="/salon">
             <Switch>
 
               <Redirect from="/" to="/home"  exact/>
