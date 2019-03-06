@@ -1,9 +1,9 @@
 export const type = 'findAlbum';
 
-const findAlbum = id => {
+const findAlbum = albums => {
   return {
     type,
-    payload:id
+    payload:albums
   };
 }
 

@@ -1,6 +1,6 @@
 export const type = 'currentPaquetesId';
 
-const currentPaquetesId = text => {
+const currentPaquetesId = id => {
   return {
     type,
     payload:id
