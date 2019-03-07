@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar,Nav,Image} from 'react-bootstrap';
-import logo1 from '../../assets/logo1.jpg';
+import { Navbar,Nav} from 'react-bootstrap';
 import Loader from '../loader/Loader.js';
 
 import './App.css';

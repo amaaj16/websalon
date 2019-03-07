@@ -1,17 +1,15 @@
 import React, { Component,Fragment } from 'react';
-import {Container,Image} from 'react-bootstrap';
-import descarga from '../../assets/descarga.png';
-import Salon from '../../assets/Salon.jpg';
+import {Image} from 'react-bootstrap';
 import App from '../header/App.js';
 import {connect} from 'react-redux';
-
+import currentAlbumId from '../../redux/actions/currentAlbumId.js';
+import ItemsGaleria from "./ItemsGaleria.js";
 import "./Galeria.css";
 class Galeria extends Component{
   constructor(props){
     super(props);
     this.state={
-
-      items:this.props.allalbum,
+      items:'',
       viewImg:false,
       visibility: 'hidden',
       idItem: ''
@@ -21,60 +19,55 @@ class Galeria extends Component{
 
   }
 
-  handleClick(id,e) {
+  componentWillMount(){
+    this.props.currentAlbumId(this.props.concepto);
+  }
+
+
+
+  handleClick(id) {
     if (!this.state.viewImg) {
       this.setState({viewImg:true,visibility: 'visible',idItem:id})
     }
     if(this.state.viewImg){
       this.setState({viewImg:false,visibility: 'hidden'})
     }
+}
 
 
 
 
-  }
    render(){
+
      const handleClick = this.handleClick;
      const {allalbum} = this.props;
-     console.log(allalbum);
-     console.log(this.props);
-     function ItemsGaleria(props){
-     const itemsImg = props.itemsS;
-     const listImg = itemsImg.map((item,i)=>(
-       <div className="responsive" key={i}>
-         <div className="gallery" key={i}>
-           <button  onClick={handleClick.bind(this, item)} className="btn-img" key={i} >
-             <Image src={item}  key={i}></Image>
-           </button>
-         </div>
-       </div>
 
-     )
-   )
-   return (<Container>{listImg}</Container>);
- }
      return (
-
+       <Fragment>
+       <App/>
        <div className="body">
        <div className="Galeria">
          <p>{this.state.concepto}</p>
          <div style={this.state} className="contenedor-img">
            <div style={this.state} className="img-view">
              <Image src={this.state.idItem}  thumbnail></Image>
-           <div><button onClick={this.handleClick} className="img-close">X</button></div>
-         </div>
-          </div>
-
-              <ItemsGaleria itemsS={this.props.allalbum}/>
-
-
-     </div>
-   </div>
+             <div>
+               <button onClick={this.handleClick} className="img-close">X</button>
+             </div>
+           </div>
+        </div>
+        <ItemsGaleria handleClick={handleClick} photos={allalbum}/>
+        </div>
+        </div>
+      </Fragment>
 
    )
    }
 }
 
+const mapDispatchToProps ={
+  currentAlbumId
+};
 
 const mapStateToProps = (state) =>{
   return {
@@ -83,4 +76,4 @@ const mapStateToProps = (state) =>{
   };
 }
 
-export default connect(mapStateToProps)(Galeria);
+export default connect(mapStateToProps,mapDispatchToProps)(Galeria);

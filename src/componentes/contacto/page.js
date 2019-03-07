@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import {Container,Row,Col,Form,Button,Image  } from 'react-bootstrap';
 import telefono from '../../assets/llamar.svg';
 import email from '../../assets/mensaje.svg';

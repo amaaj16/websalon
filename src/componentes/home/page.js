@@ -4,7 +4,6 @@ import {Image,Row,Col  } from 'react-bootstrap';
 //import { Player,ControlBar,PlayToggle } from 'video-react';
 import "./Home.css";
 import portada from '../../assets/portada.jpg';
-import {connect} from 'react-redux';
 import "../../../node_modules/video-react/dist/video-react.css";
 
 function Page(props){

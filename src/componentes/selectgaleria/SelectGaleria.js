@@ -1,4 +1,4 @@
-import React, { Component,Fragment } from 'react';
+import React, {Fragment } from 'react';
 
 import {Link} from 'react-router-dom';
 import {Image} from 'react-bootstrap';
@@ -6,15 +6,11 @@ import {Image} from 'react-bootstrap';
 import "../galeria/Galeria.css";
 function SelectGaleria(props){
 
-    const {albums,
-      concepto,
-      letClick,
-      changeConcepto
-    } = props;
+    const {albums} = props;
       const albumsD = albums;
       const lstAlbums = albumsD.map((album,i)=>(
         <Link to={album.to} key={i} replace >
-        <div className="responsive" onClick={letClick.bind(this,album.name)}>
+        <div className="responsive">
           <div className="album">
             <Image src={album.photo} ></Image>
             <div className="titleAlbum">

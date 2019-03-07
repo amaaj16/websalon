@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Container,Row,Col,Image  } from 'react-bootstrap';
 import logo2 from '../../assets/logo2.jpg';
 const page = (props)=>{

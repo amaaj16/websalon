@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import {Container,Row,Col,Card  } from 'react-bootstrap';
+import React from 'react';
+import {Row,Col,Card} from 'react-bootstrap';
 import Salon from '../../assets/Salon.jpg'
 import './Paquetes.css';
 function Page(props){

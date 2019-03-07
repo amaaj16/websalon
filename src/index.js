@@ -5,7 +5,7 @@ import {Provider} from 'react-redux';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import * as serviceWorker from './serviceWorker';
 import './Webfont/stylesheet.css';
-import {BrowserRouter as Router,Route,Switch,Redirect} from 'react-router-dom';
+import {BrowserRouter as Router,Switch,Redirect} from 'react-router-dom';
 import Routing from './Routing.js';
 import store from './redux/store.js';
 
