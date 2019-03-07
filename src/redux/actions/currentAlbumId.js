@@ -1,6 +1,6 @@
 export const type = 'currentAlbumId  ';
 
-const currentAlbumId = text => {
+const currentAlbumId = id => {
   return {
     type,
     payload:id

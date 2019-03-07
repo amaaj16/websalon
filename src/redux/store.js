@@ -3,7 +3,6 @@ import album from './reducers/album.js';
 import Paquetes from './reducers/paquetes.js';
 import selectAlbum from './reducers/selectAlbum.js';
 import selectPaquete from './reducers/selectpaquete.js';
-
 const reducer = combineReducers({
   album,
   Paquetes,
@@ -12,7 +11,6 @@ const reducer = combineReducers({
 });
 
 const store = createStore(reducer);
-console.log(`state ${store.getState()}`);
 
 
 

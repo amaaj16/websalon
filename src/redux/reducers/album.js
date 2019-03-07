@@ -1,10 +1,12 @@
-import findAlbum from '../../redux/actions/findAlbum.js';
+import {type as findAlbum} from '../../redux/actions/findAlbum.js';
+
+import albums from '../../modelo.js'
 const defaultState= [];
 
-function reducer (state = defaultState, {type,payload}){
+function reducer (state = defaultState, {type}){
   switch (type) {
     case findAlbum :
-      return Object.assign({},state,{payload})
+      return albums;
     default:
       return state;
 

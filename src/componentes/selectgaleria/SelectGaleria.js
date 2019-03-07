@@ -5,8 +5,8 @@ import {Image} from 'react-bootstrap';
 
 import "../galeria/Galeria.css";
 function SelectGaleria(props){
-      console.log(props.al.albums);
-      const albumsD = props.al.albums;
+    const {albums} = props;
+      const albumsD = albums;
       const lstAlbums = albumsD.map((album,i)=>(
         <Link to={album.to} key={i} replace >
         <div className="responsive">
