@@ -5,11 +5,16 @@ import {Image} from 'react-bootstrap';
 
 import "../galeria/Galeria.css";
 function SelectGaleria(props){
-    const {albums} = props;
+
+    const {albums,
+      concepto,
+      letClick,
+      changeConcepto
+    } = props;
       const albumsD = albums;
       const lstAlbums = albumsD.map((album,i)=>(
         <Link to={album.to} key={i} replace >
-        <div className="responsive">
+        <div className="responsive" onClick={letClick.bind(this,album.name)}>
           <div className="album">
             <Image src={album.photo} ></Image>
             <div className="titleAlbum">

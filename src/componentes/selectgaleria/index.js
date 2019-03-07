@@ -1,7 +1,7 @@
 import React, { Component,Fragment } from 'react';
 import SelectGaleria from "./SelectGaleria.js";
 import App from '../header/App.js';
-
+import currentAlbumId from '../../redux/actions/currentAlbumId.js';
 import {connect} from 'react-redux';
 import findAlbum from '../../redux/actions/findAlbum.js';
 class Albums extends Component{
@@ -10,8 +10,13 @@ class Albums extends Component{
     this.state={
 
       visibility: 'visible',
-
+      concepto:''
     }
+    this.letClick= this.letClick.bind(this);
+
+  }
+  letClick(concepto){
+    this.props.currentAlbumId(concepto);
   }
 
   componentWillMount(){
@@ -20,11 +25,12 @@ class Albums extends Component{
 
   render() {
     const finAlbums = this.props.albums;
+    const {concepto} = this.state;
     return(
         <Fragment>
         <App/>
         <div className="body">
-        <SelectGaleria albums={finAlbums}/>
+        <SelectGaleria albums={finAlbums} letClick={this.letClick}  />
         </div>
         </Fragment>
     )
@@ -32,7 +38,8 @@ class Albums extends Component{
 }
 
 const mapDispatchToProps ={
-  findAlbum
+  findAlbum,
+  currentAlbumId
 };
 
 const mapStateToProps = (state) =>{

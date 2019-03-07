@@ -4,14 +4,14 @@ import descarga from '../../assets/descarga.png';
 import Salon from '../../assets/Salon.jpg';
 import App from '../header/App.js';
 import {connect} from 'react-redux';
-import currentAlbumId from '../../redux/actions/currentAlbumId.js';
+
 import "./Galeria.css";
 class Galeria extends Component{
   constructor(props){
     super(props);
     this.state={
-      concepto:props.concepto,
-      items:[],
+
+      items:this.props.allalbum,
       viewImg:false,
       visibility: 'hidden',
       idItem: ''
@@ -20,11 +20,6 @@ class Galeria extends Component{
     this.handleClick = this.handleClick.bind(this);
 
   }
-
-  componentWillMount(){
-          this.props.currentAlbumId(this.state.concepto);
-  }
-
 
   handleClick(id,e) {
     if (!this.state.viewImg) {
@@ -44,8 +39,6 @@ class Galeria extends Component{
      console.log(allalbum);
      console.log(this.props);
      function ItemsGaleria(props){
-      const {allalbum} = this.props;
-      console.log(allalbum);
      const itemsImg = props.itemsS;
      const listImg = itemsImg.map((item,i)=>(
        <div className="responsive" key={i}>
@@ -61,8 +54,7 @@ class Galeria extends Component{
    return (<Container>{listImg}</Container>);
  }
      return (
-       <Fragment>
-       <App/>
+
        <div className="body">
        <div className="Galeria">
          <p>{this.state.concepto}</p>
@@ -78,13 +70,11 @@ class Galeria extends Component{
 
      </div>
    </div>
-     </Fragment>
+
    )
    }
 }
-const mapDispatchToProps ={
-  currentAlbumId
-};
+
 
 const mapStateToProps = (state) =>{
   return {
@@ -93,4 +83,4 @@ const mapStateToProps = (state) =>{
   };
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Galeria);
+export default connect(mapStateToProps)(Galeria);
