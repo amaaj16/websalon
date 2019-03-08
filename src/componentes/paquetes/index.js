@@ -15,12 +15,12 @@ class Paquetes extends Component{
   }
   render(){
     console.log(this.props);
-    const {paquete} = this.props;
+    const {paquetes} = this.props;
     return(
       <Fragment>
       <App/>
       <div className="body">
-      <Page {...paquete}/>
+      <Page paquetes={paquetes}/>
       </div>
       </Fragment>
     )
@@ -33,7 +33,7 @@ const mapDispatchToProps ={
 
 const mapStateToProps = (state) =>{
   return {
-    paquete:state.paquetes,
+    paquetes:state.paquetes,
     hola:"hello"
   };
 };

@@ -1,4 +1,4 @@
-import Salon from './assets/Salon.jpg'
+import Salon from './assets/Salon.jpg';
 export default [
   {
     title:'Paquete 1',
@@ -20,4 +20,11 @@ export default [
   intro:'Some quick example text to build on the card title and make up the bulk ofthe cards content.',
   to:'/p3'
 
-}]
+},
+{
+  title:'Paquete 4',
+  img:Salon,
+  intro:'Some quick example text to build on the card title and make up the bulk ofthe cards content.',
+  to:'/p3'
+
+}];

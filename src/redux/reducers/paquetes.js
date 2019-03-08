@@ -1,6 +1,6 @@
 import {type as findPaquetes} from '../actions/findPaquetes.js';
 import paquetes from '../../modeloPaquetes.js';
-const defaultState= [];
+const defaultState= paquetes;
 
 function reducer (state = defaultState, {type}){
   switch (type) {
