@@ -2,7 +2,7 @@ import React from "react";
 import { Route} from "react-router-dom";
 import Albums from './componentes/selectgaleria/index.js';
 import Home from './componentes/home/Home.js';
-import Paquetes from './componentes/paquetes/Paquetes.js';
+import Paquetes from './componentes/paquetes/index.js';
 import Contacto from './componentes/contacto/Contacto.js';
 import Acerca from './componentes/acerca/Acerca.js';
 import Galeria from './componentes/galeria/Galeria.js';
