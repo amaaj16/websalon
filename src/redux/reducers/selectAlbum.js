@@ -5,8 +5,10 @@ const defaultState = '';
 function reducer (state=defaultState,{type,payload}){
   switch (type) {
     case currentAlbumId:
-    console.log(payload);
-    return photos;
+    if(payload === 'boda'){
+      return photos;
+    }
+    break;
     default:
       return state;
 
