@@ -3,7 +3,7 @@ import {Image} from 'react-bootstrap';
 import App from '../header/App.js';
 import {connect} from 'react-redux';
 import currentAlbumId from '../../redux/actions/currentAlbumId.js';
-//import ItemsGaleria from "./ItemsGaleria.js";
+import ItemsGaleria from "./ItemsGaleria.js";
 import "./Galeria.css";
 class Galeria extends Component{
   constructor(props){
@@ -23,7 +23,7 @@ class Galeria extends Component{
 
 
 
-  handleClick(id) {
+  handleClick(id,e) {
     if (!this.state.viewImg) {
       this.setState({viewImg:true,visibility: 'visible',idItem:id})
     }
@@ -34,43 +34,31 @@ class Galeria extends Component{
 
 
 componentWillMount(){
-  console.log('concepto'+ this.props.concepto);
+
   this.props.currentAlbumId(this.props.concepto);
 }
 
    render(){
-     const{
-       concepto,
-       visibility,
-       idItem,
 
-     }=this.state;
-     console.log(this.props)
-     const hola=["jj",1,3,8];
-
-       const its=hola;
-       const regis = its.map((it,i)=>(
-         <div key={i}>{it}</div>
-       ));
-
-
-
+     
+     const {allalbum}=this.props;
 
      return (
        <Fragment>
        <App/>
        <div className="body">
        <div className="Galeria">
-         <p>{concepto}</p>
-         <div style={visibility} className="contenedor-img">
-           <div style={visibility} className="img-view">
-             <Image src={idItem}  thumbnail></Image>
+         <p>{this.state.concepto}</p>
+         <div style={this.state} className="contenedor-img">
+           <div style={this.state} className="img-view">
+             <Image src={this.state.idItem}  thumbnail></Image>
              <div>
                <button onClick={this.handleClick} className="img-close">X</button>
              </div>
            </div>
-           {regis}
+
         </div>
+        <ItemsGaleria handleClick={this.handleClick} item={allalbum}/>
         </div>
         </div>
       </Fragment>
