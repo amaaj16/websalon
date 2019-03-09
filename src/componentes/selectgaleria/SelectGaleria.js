@@ -5,7 +5,7 @@ import {Image} from 'react-bootstrap';
 
 import "../galeria/Galeria.css";
 function SelectGaleria(props){
-
+  console.log(props.albums);
     const {albums} = props;
       const albumsD = albums;
       const lstAlbums = albumsD.map((album,i)=>(
