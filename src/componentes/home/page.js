@@ -27,6 +27,18 @@ function Page(props){
             <div className="linea"></div>
           </div>
           <Container>
+            <Row>
+              <Col lg="auto" md="auto" sm="auto">
+                <h5 >Salon "El Quijite" ofrece una amplia gama de servicios con la mejor calidad y servicio. Nos dedicamos a realizar todo tipo de eventos sociales a aprecios accesibles. Para nosotros lo mas importante son
+                  clientes, debido a esto cuidamos de cada detalle para que todo evento se lleve a la perfección, asi como lo planeaste.
+                </h5>
+                <br/>
+                <h5>
+                  Realizamos eventos como bodas, xv's, reuniones femiliares, eventos empresariales, etc.
+                </h5>
+                <div className="text-home"></div>
+              </Col>
+            </Row>
             <Row className="justify-content-md-center justify-content-sm-center">
             <Col lg="auto" md="auto" sm="auto" >
               <Card style={{ width: '20rem' }} className="card-home">
