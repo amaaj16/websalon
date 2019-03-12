@@ -40,7 +40,7 @@ componentWillMount(){
 
    render(){
 
-     
+
      const {allalbum}=this.props;
 
      return (
@@ -58,9 +58,11 @@ componentWillMount(){
            </div>
 
         </div>
+
+        </div>
+        </div>
+
         <ItemsGaleria handleClick={this.handleClick} item={allalbum}/>
-        </div>
-        </div>
       </Fragment>
 
    )

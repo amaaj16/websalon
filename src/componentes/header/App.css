@@ -1,4 +1,9 @@
-
+:root{
+  --primary:#1A237E;
+}
+.bar-text{
+  color: #ffffff;
+}
 
 .App-header {
   height: 100%;

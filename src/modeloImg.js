@@ -1,20 +1,47 @@
 import descarga from './assets/descarga.png';
 import Salon from './assets/Salon.jpg';
 export default [
-  {id:'1',
-  img:descarga
+  {
+  img:descarga,
+  title:'Image',
+  author:'author',
+  cols: 1
   },
-  {id:'2',
-  img:Salon
+  {
+  img:Salon,
+  title:'Image',
+  author:'author',
+  cols: 2
   },
-  {id:'3',
-  img:descarga
+  {
+  img:descarga,
+  title:'Image',
+  author:'author',
+  cols: 1
   },
-  {id:'4',
-  img:Salon
+  {
+  img:Salon,
+  title:'Image',
+  author:'author',
+  cols: 2
   },
-  {id:'5',
-  img:descarga
-  }
+  {
+  img:descarga,
+  title:'Image',
+  author:'author',
+  cols: 1
+},
+{
+img:descarga,
+title:'Image',
+author:'author',
+cols: 1
+},
+{
+img:Salon,
+title:'Image',
+author:'author',
+cols: 2
+}
 
   ];
