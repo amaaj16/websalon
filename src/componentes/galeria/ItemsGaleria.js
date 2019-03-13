@@ -16,16 +16,10 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.paper,
   },
   gridList: {
-    width: 500,
-    height: 450,
+    width: 20,
+
   },
-  header: {
-    display: 'flex',
-    alignItems: 'center',
-    height: 50,
-    paddingLeft: theme.spacing.unit * 4,
-    backgroundColor: 'white',
-  }
+
 });
 
 
@@ -37,16 +31,15 @@ function RenderItems(props) {
     }=props;
     console.log(props)
 return(
-  <Paper square elevation={0} className={classes.header}>
-    <div className={classes.root}>
-      <GridList cellHeight='300' className={classes.gridList} cols={4}>
+  <Paper square elevation={1} className={classes.root}>
+      <GridList cellHeight='300' className={classes.gridList} cols={3}>
         {items.map((tile,i) => (
           <GridListTile key={i} cols={tile.cols || 1}>
-            <img src={tile.img} alt={tile.title} className="size-imgs" />
+            <img src={tile.img} alt={tile.title} style={tile.style} className="size-imgs" />
           </GridListTile>
         ))}
       </GridList>
-    </div>
+
 
   </Paper>
     /*

@@ -4,6 +4,7 @@ import App from '../header/App.js';
 import {connect} from 'react-redux';
 import currentAlbumId from '../../redux/actions/currentAlbumId.js';
 import ItemsGaleria from "./ItemsGaleria.js";
+import CssBaseline from '@material-ui/core/CssBaseline';
 import "./Galeria.css";
 class Galeria extends Component{
   constructor(props){
@@ -45,6 +46,7 @@ componentWillMount(){
 
      return (
        <Fragment>
+       <CssBaseline />
        <App/>
        <div className="body">
        <div className="Galeria">
