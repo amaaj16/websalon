@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
+import {Paper} from '@material-ui/core';
 
 
 const styles = theme => ({
@@ -18,6 +19,13 @@ const styles = theme => ({
     width: 500,
     height: 450,
   },
+  header: {
+    display: 'flex',
+    alignItems: 'center',
+    height: 50,
+    paddingLeft: theme.spacing.unit * 4,
+    backgroundColor: 'white',
+  }
 });
 
 
@@ -29,8 +37,9 @@ function RenderItems(props) {
     }=props;
     console.log(props)
 return(
-    <div className={styles.root}>
-      <GridList cellHeight='300' className={styles.gridList} cols={4}>
+  <Paper square elevation={0} className={classes.header}>
+    <div className={classes.root}>
+      <GridList cellHeight='300' className={classes.gridList} cols={4}>
         {items.map((tile,i) => (
           <GridListTile key={i} cols={tile.cols || 1}>
             <img src={tile.img} alt={tile.title} className="size-imgs" />
@@ -38,6 +47,8 @@ return(
         ))}
       </GridList>
     </div>
+
+  </Paper>
     /*
     const lst =items.map((item,i)=>(
     <div className="responsive" key={i} >
@@ -53,7 +64,7 @@ return(
    )
 }
 function ItemsGaleria(it){
-  return (<Fragment><RenderItems items={it.item} handleClick={it.handleClick} /></Fragment>);
+  return (<Fragment><RenderItems items={it.item} handleClick={it.handleClick} classes={styles}/></Fragment>);
 }
 ItemsGaleria.propTypes = {
   classes: PropTypes.object.isRequired,
