@@ -19,7 +19,7 @@ export default [
     width:'300px',
     height:'100px'
   }],
-  cols: 2
+  cols: 1
   },
   {
   img:descarga,
@@ -39,7 +39,7 @@ export default [
     width:'300px',
     height:'100px'
   }],
-  cols: 2
+  cols: 1
   },
   {
   img:descarga,
@@ -70,7 +70,7 @@ style:[{
   width:'300px',
   height:'100px'
 }],
-cols: 2
+cols: 1
 }
 
   ];

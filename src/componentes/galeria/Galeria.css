@@ -2,6 +2,7 @@
   position: fixed;
   background: rgb(0,0,0,0.8);
   display: flex;
+  align-items: center;
   right: 0;
   left:0;
   top:0;
@@ -16,14 +17,13 @@
 
 .img-view{
   position: relative;
-  top: 27%;
   width: auto;
   visibility: hidden;
 
 
 }
+
 .img-close{
-  position: absolute;
   right: 5px;
   top: 5px;
   height: 40px;
@@ -31,6 +31,13 @@
   color: #FFFFFF;
   background: rgb(0,0,0,0.6);
   border: none;
+}
+.dv-btn-close{
+  position: absolute;
+  height: auto;
+  width: auto;
+  top: 5px;
+  right: 5px;
 }
 .btn-img{
   padding: 0;

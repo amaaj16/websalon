@@ -7,7 +7,7 @@ function LtsPaquetes(items){
   const {paquetes} = items;
   const listapaquetes = paquetes.map((paquete,i)=>(
     <Col md="auto" sm="auto" lg="auto" key={i}>
-    <Card className="card" style={{ width: '20rem' }}>
+    <Card className="card" style={{ width: '30rem' }}>
       <Card.Img variant="top" src={paquete.img}/>
       <Card.Body>
           <Card.Title><h5>{paquete.title}</h5></Card.Title>
@@ -15,7 +15,7 @@ function LtsPaquetes(items){
             {paquete.intro}
           </Card.Text>
           <Link to={paquete.to} key={i} replace >
-            <Button variant="primary" >Ver más..</Button>
+            <Button variant="primary" >Ver más...</Button>
         </Link>
       </Card.Body>
     </Card>
@@ -32,12 +32,12 @@ function Page(props){
     <Fragment>
     <div className="paquetes">
       <div className="title"><h1>Servicios</h1></div>
-      <div>
-          <p>
+      <Container>
+          <p className="intro">
             Some quick example text to build on the card title and make up the bulk of
             the card's content.
           </p>
-      </div>
+      </Container>
       <Container fluid={true}>
         <Row className="justify-content-md-center justify-content-sm-center">
           <LtsPaquetes paquetes={paquetes}/>

@@ -33,7 +33,7 @@ class App extends Component {
         return (
         <div className="App">
           <div className="App-header">
-          <Navbar  fixed="top" bg="primary" className="bar-text" expand="md" >
+          <Navbar  fixed="top" bg="light" className="bar-text" expand="md" >
             <Navbar.Brand href="home" className="title-nav"><p className="logotitle">El Quijote</p></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

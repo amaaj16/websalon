@@ -54,7 +54,7 @@ componentWillMount(){
          <div style={this.state} className="contenedor-img">
            <div style={this.state} className="img-view">
              <Image src={this.state.idItem}  thumbnail></Image>
-             <div>
+             <div className="dv-btn-close">
                <button onClick={this.handleClick} className="img-close">X</button>
              </div>
            </div>
