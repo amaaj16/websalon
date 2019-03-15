@@ -4,6 +4,14 @@ import {Link} from 'react-router-dom';
 import {Image,Container,Row,Col} from 'react-bootstrap';
 import {Paper,Typography} from '@material-ui/core';
 import "../galeria/Galeria.css";
+const style= theme =>({
+  root:{
+    ...theme.mixins.gutters(),
+    paddingTop: theme.spacing.unit * 2,
+    paddingBottom: theme.spacing.unit * 2,
+  }
+})
+
 function SelectGaleria(props){
   console.log(props.albums);
     const {albums} = props;
