@@ -2,7 +2,7 @@ import React, {Fragment } from 'react';
 
 import {Link} from 'react-router-dom';
 import {Image,Container,Row,Col} from 'react-bootstrap';
-
+import {Paper,Typography} from '@material-ui/core';
 import "../galeria/Galeria.css";
 function SelectGaleria(props){
   console.log(props.albums);
@@ -26,6 +26,9 @@ function SelectGaleria(props){
     ));
     return (
       <Fragment>
+      <Paper>
+        <Typography variant='h1' align='center'> </Typography>
+      </Paper>
       <div className="title"><h1>Galeria</h1></div>
       <Container fluid={true}>
         <Row className="justify-content-md-center">

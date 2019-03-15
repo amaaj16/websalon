@@ -57,7 +57,7 @@ return(
    )
 }
 function ItemsGaleria(it){
-  return (<Fragment><RenderItems items={it.item} handleClick={it.handleClick} classes={styles}/></Fragment>);
+  return (<Fragment><RenderItems items={it.item} handleClick={it.handleClick} /></Fragment>);
 }
 ItemsGaleria.propTypes = {
   classes: PropTypes.object.isRequired,
