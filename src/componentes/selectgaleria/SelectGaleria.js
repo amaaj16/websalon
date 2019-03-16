@@ -1,15 +1,13 @@
 import React, {Fragment } from 'react';
-
 import {Link} from 'react-router-dom';
 import {Image,Container,Row,Col} from 'react-bootstrap';
-import {Paper,Typography} from '@material-ui/core';
+import PropTypes from 'prop-types';
+import {withStyles} from '@material-ui/core/styles';
 import "../galeria/Galeria.css";
+import HeadGaleria from "./HeadGaleris.js";
 const style= theme =>({
-  root:{
-    ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
-  }
+
+
 })
 
 function SelectGaleria(props){
@@ -21,7 +19,7 @@ function SelectGaleria(props){
           <Link to={album.to} key={i} replace >
             <div className="responsive">
               <div className="album">
-                <Image src={album.photo} ></Image>
+                <Image src={album.photo} className="img-album"></Image>
                 <div className="titleAlbum">
                   <h5>{album.name}</h5>
                 </div>
@@ -34,18 +32,19 @@ function SelectGaleria(props){
     ));
     return (
       <Fragment>
-      <Paper>
-        <Typography variant='h1' align='center'> </Typography>
-      </Paper>
-      <div className="title"><h1>Galeria</h1></div>
+      <HeadGaleria/>
+
       <Container fluid={true}>
         <Row className="justify-content-md-center">
             {lstAlbums}
         </Row>
       </Container>
-
       </Fragment>
     );
   }
 
-export default SelectGaleria;
+  SelectGaleria.propTypes = {
+    classes: PropTypes.object.isRequired,
+  };
+
+export default withStyles(style) (SelectGaleria);

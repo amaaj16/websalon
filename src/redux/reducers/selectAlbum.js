@@ -6,7 +6,7 @@ function reducer (state=defaultState,{type,payload}){
   switch (type) {
     case currentAlbumId:
       return photos;
-    break;
+
     default:
       return state;
 

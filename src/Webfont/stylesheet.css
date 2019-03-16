@@ -26,6 +26,9 @@
 
 
 }
+.txtLargo{
+  width: 80%;
+}
 
 .logotitle{
   margin: 0;
@@ -52,8 +55,19 @@ h2,h3,h4,h5{
   font-kerning: none;
 }
 h5{
-  font-size: 1.05em;
-
+  font-size:0.7em;
+}
+h4{
+  font-size:1em;
+}
+h3{
+  font-size:1.3em;
+}
+h2{
+  font-size:1.6em;
+}
+.textCenter{
+  text-align: center;
 }
 a,p{
   font-family: "calendas_plusregular";

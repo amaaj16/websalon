@@ -1,4 +1,4 @@
-import descarga from './assets/descarga.png';
+import descarga from './assets/fiesta.jpg';
 import Salon from './assets/Salon.jpg';
 export default [
   {
@@ -19,7 +19,7 @@ export default [
     width:'300px',
     height:'100px'
   }],
-  cols: 1
+  cols: 2
   },
   {
   img:descarga,
@@ -39,7 +39,7 @@ export default [
     width:'300px',
     height:'100px'
   }],
-  cols: 1
+  cols: 2
   },
   {
   img:descarga,
@@ -68,6 +68,34 @@ title:'Image',
 author:'author',
 style:[{
   width:'300px',
+  height:'100px'
+}],
+cols: 1
+},{
+img:descarga,
+title:'Image',
+author:'author',
+style:[{
+  width:'100px',
+  height:'100px'
+}],
+cols: 1
+},
+{
+img:Salon,
+title:'Image',
+author:'author',
+style:[{
+  width:'300px',
+  height:'100px'
+}],
+cols: 1
+},{
+img:descarga,
+title:'Image',
+author:'author',
+style:[{
+  width:'100px',
   height:'100px'
 }],
 cols: 1

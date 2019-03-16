@@ -1,15 +1,14 @@
 import React, {Fragment} from 'react';
-import {Image} from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-import {Paper} from '@material-ui/core';
+
 
 
 const styles = theme => ({
   root: {
-    width: 0,
+    width:'70%',
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
@@ -29,7 +28,6 @@ function RenderItems(props) {
       items,
       handleClick
     }=props;
-    console.log(props)
 return(
   <div  className={classes.root}>
       <GridList cellHeight={250}  className={classes.gridList} cols={4}>
@@ -57,7 +55,7 @@ return(
    )
 }
 function ItemsGaleria(it){
-  return (<Fragment><RenderItems items={it.item} handleClick={it.handleClick} /></Fragment>);
+  return (<Fragment><RenderItems items={it.item} handleClick={it.handleClick} classes ={styles} /></Fragment>);
 }
 ItemsGaleria.propTypes = {
   classes: PropTypes.object.isRequired,

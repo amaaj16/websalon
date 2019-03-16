@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import currentAlbumId from '../../redux/actions/currentAlbumId.js';
 import ItemsGaleria from "./ItemsGaleria.js";
 import CssBaseline from '@material-ui/core/CssBaseline';
+import HeadGaleria from "../selectgaleria/HeadGaleris.js";
 import "./Galeria.css";
 class Galeria extends Component{
   constructor(props){
@@ -42,7 +43,7 @@ componentWillMount(){
    render(){
 
 
-     const {allalbum}=this.props;
+     const {allalbum,concepto}=this.props;
 
      return (
        <Fragment>
@@ -50,7 +51,7 @@ componentWillMount(){
        <App/>
        <div className="body">
        <div className="Galeria">
-         <p>{this.state.concepto}</p>
+
          <div style={this.state} className="contenedor-img">
            <div style={this.state} className="img-view">
              <Image src={this.state.idItem}  thumbnail></Image>
@@ -63,6 +64,7 @@ componentWillMount(){
 
         </div>
         </div>
+        <HeadGaleria concepto={concepto}/>
 
         <ItemsGaleria handleClick={this.handleClick} item={allalbum}/>
       </Fragment>

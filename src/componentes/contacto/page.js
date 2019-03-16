@@ -4,6 +4,7 @@ import telefono from '../../assets/llamar.svg';
 import email from '../../assets/mensaje.svg';
 import ubicacion from '../../assets/marcador-de-posicion.svg';
 import './Contacto.css';
+
 function Page(props){
   return (
   <div className="Contacto">

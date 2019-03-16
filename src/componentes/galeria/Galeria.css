@@ -13,14 +13,22 @@
   justify-content: center;
 }
 
-
+.img-album{
+  border-radius:  2px 2px 2px 2px;
+}
 
 .img-view{
   position: relative;
   width: auto;
   visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+}
 
+.img-view img {
+  width: 70%;
 }
 
 .img-close{
@@ -57,12 +65,12 @@ div.gallery {
   border: 10px solid #FAFAFA;
 }
 div.album {
-  background-color: #FAFAFA;
+  background-color: white;
   display: block;
   width: auto;
   height: 271px;
-  border-radius: 2px;
-  border: 10px solid #FAFAFA;
+  border-radius: 5px;
+  border: 10px solid white;
 }
 div.album img {
 width: 250px;
@@ -75,10 +83,7 @@ div.titleAlbum{
   text-align: center;
 }
 
-h5{
-  font-size: 1.25em;
-  margin: 0;
-}
+
 
 div.album:hover{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,.1),
