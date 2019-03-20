@@ -1,5 +1,6 @@
 import {type as findAlbum} from '../../redux/actions/findAlbum.js';
 import albums from '../../modelo.js'
+
 const defaultState= [];
 
 function reducer (state = defaultState, {type}){
