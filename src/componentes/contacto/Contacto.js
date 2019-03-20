@@ -9,7 +9,7 @@ class Contacto extends Component{
       <App/>
       <div className="body">
         <MapContainer/>
-      <Page/>
+        <Page/>
       </div>
       </Fragment>
     )

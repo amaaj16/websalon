@@ -8,6 +8,7 @@ import './Paquetes.css';
 
 const style= theme =>({
   root:{
+    position:'relative',
     display: 'flex',
     justifyContent:'center',
     flexDirection:'column',

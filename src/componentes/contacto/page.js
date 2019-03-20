@@ -4,16 +4,36 @@ import telefono from '../../assets/llamar.svg';
 import email from '../../assets/mensaje.svg';
 import ubicacion from '../../assets/marcador-de-posicion.svg';
 import './Contacto.css';
+import PropTypes from 'prop-types';
+import {withStyles} from '@material-ui/core/styles';
+import {Paper} from '@material-ui/core';
+const style= theme =>({
+  root:{
+    width: '90%',
+    height:'auto',
+    margin: '0 auto',
+    position: 'relative',
+    top:'460px',
+    display: 'flex',
+    justifyContent:'center',
+    flexDirection:'column',
+    alignSelf:'center',
+    alignItems:'center'
+  }
+
+})
 
 function Page(props){
+  const {classes} = props;
   return (
+  <Paper className={classes.root} elevation={2}>
   <div className="Contacto">
   <div className="card-c">
    <p>Envianos todas tus dudas.</p>
   </div>
-  <Container>
+  <Container fluid={true}>
   <Row>
-  <Col lg="5">
+  <Col lg="5" md="5" >
     <Form>
      <Form.Group>
        <Form.Label>Nombre:</Form.Label>
@@ -53,8 +73,13 @@ function Page(props){
    </Row>
   </Container>
 </div>
+</Paper>
 );
 }
 
 
-export default Page;
+Page.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(style) (Page);
