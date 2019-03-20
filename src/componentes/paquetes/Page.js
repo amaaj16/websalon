@@ -53,8 +53,8 @@ function Page(props){
       <Paper elevation={1} className={classes.root}>
         <h1 className="textCenter" >Servicios</h1>
         <div className="linea"></div>
-        <h4 className="textCenter" >Some quick example text to build on the card title and make up the bulk of
-        the card's content. </h4>
+        <h3 className="textCenter" >Some quick example text to build on the card title and make up the bulk of
+        the card's content. </h3>
 
       </Paper>
       <Container className={classes.cont} fluid={true}>

@@ -17,8 +17,7 @@ const style= theme =>({
     display: 'flex',
     justifyContent:'center',
     flexDirection:'column',
-    alignSelf:'center',
-    alignItems:'center'
+
   }
 
 })
@@ -29,7 +28,9 @@ function Page(props){
   <Paper className={classes.root} elevation={2}>
   <div className="Contacto">
   <div className="card-c">
-   <p>Envianos todas tus dudas.</p>
+    <h1 className="textCenter" >Contacto</h1>
+    <div className="linea"></div>
+    <h3 className="textCenter" >¡Envianos todas tus dudas! </h3>
   </div>
   <Container fluid={true}>
   <Row>
@@ -46,26 +47,32 @@ function Page(props){
      </Form.Group>
 
      <Form.Group>
-       <Form.Label>Email:</Form.Label>
+       <Form.Label>Comentario:</Form.Label>
        <Form.Control as="textarea" rows="6"/>
      </Form.Group>
-     <Button variant="primary"type="Submit">Enviar</Button>
+     <Button variant="primary" type="Submit">Enviar</Button>
     </Form>
    </Col>
 
-    <Col lg={{span: 5, offset:2}}>
+    <Col lg={{span: 5, offset:2}} md={{span: 5, offset:2}}>
      <div className="datos">
-       <Row>
-         <Image src={telefono}/>
-         <p>55-55-55-55-55</p>
+       <Row >
+         <Col lg="auto" md="auto" sm="auto" className="datos-sm">
+           <Image src={telefono}/>
+          <p>55-55-55-55-55</p>
+         </Col>
        </Row>
        <Row>
-         <Image src={email}/>
-         <p>elquijote@gmail.com</p>
+         <Col lg="auto" md="auto" sm="auto" className="datos-sm">
+           <Image src={email}/>
+          <p>elquijote@gmail.com</p>
+         </Col>
        </Row>
        <Row>
-         <Image src={ubicacion}/>
+         <Col lg="auto" md="auto" sm="auto" className="datos-sm">
+           <Image src={ubicacion}/>
            <p>Zapopan 52 Col. Virgencitas 57300 Edo. Mex.</p>
+          </Col>
        </Row>
 
      </div>
