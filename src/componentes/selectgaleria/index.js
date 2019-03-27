@@ -18,27 +18,15 @@ class Albums extends Component{
 
   componentWillMount(){
     const micliente = new cliente('POST');
-    const request = micliente.enviar(JSON.stringify({query: "{ albums{ name, to, photo } }"}));
+    const query = micliente.query("{albums{name,to,photo }}");
+    
+    console.log(query.toString());
+    const request = micliente.enviar(query);
     request.then(data=>{
       console.log(data)
       this.props.findAlbum(data.data.albums);
     });
-    /*
-    fetch('http://localhost:4000/graphql', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-        
-        },
-        mode: 'cors',
-        body: JSON.stringify({query: "{ albums{ name, to, photo } }"})
-        }).then(r => r.json())
-        .then(data=>{
-          console.log(data)
-          this.props.findAlbum(data.data.albums);
-        })
-        */  
+     
   }
 
   render() {

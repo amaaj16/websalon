@@ -10,11 +10,6 @@ export class cliente {
         }
      
 
-     send(body){
-       return this.enviar(body);
-
-    }
-
     enviar(body){
        return fetch('http://localhost:4000/graphql', {
         method:this.metodo,
@@ -22,6 +17,20 @@ export class cliente {
         mode:this.mode,
         body: body,
         }).then(r => r.json())
+    }
+
+    query(Objeto){
+        var graphQL= JSON.stringify({query:Objeto});
+        return graphQL;
+
+    }
+
+    mutation(){
+
+    }
+
+    sunscrition(){
+
     }
 
 }
