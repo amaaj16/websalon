@@ -3,6 +3,7 @@ import SelectGaleria from "./SelectGaleria.js";
 import App from '../header/App.js';
 import {connect} from 'react-redux';
 import findAlbum from '../../redux/actions/findAlbum.js';
+import {cliente} from '../../resolvers/resolver.js';
 class Albums extends Component{
   constructor(props){
     super(props);
@@ -16,6 +17,13 @@ class Albums extends Component{
   }
 
   componentWillMount(){
+    const micliente = new cliente('POST');
+    const request = micliente.enviar(JSON.stringify({query: "{ albums{ name, to, photo } }"}));
+    request.then(data=>{
+      console.log(data)
+      this.props.findAlbum(data.data.albums);
+    });
+    /*
     fetch('http://localhost:4000/graphql', {
         method: 'POST',
         headers: {
@@ -30,7 +38,7 @@ class Albums extends Component{
           console.log(data)
           this.props.findAlbum(data.data.albums);
         })
-          
+        */  
   }
 
   render() {
