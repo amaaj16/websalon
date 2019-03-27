@@ -16,7 +16,21 @@ class Albums extends Component{
   }
 
   componentWillMount(){
-          this.props.findAlbum();
+    fetch('http://localhost:4000/graphql', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+        
+        },
+        mode: 'cors',
+        body: JSON.stringify({query: "{ albums{ name, to, photo } }"})
+        }).then(r => r.json())
+        .then(data=>{
+          console.log(data)
+          this.props.findAlbum(data.data.albums);
+        })
+          
   }
 
   render() {

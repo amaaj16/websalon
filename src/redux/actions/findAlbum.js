@@ -1,9 +1,9 @@
 export const type = 'findAlbum';
 
-const findAlbum = () => {
+const findAlbum = (albums) => {
   return {
     type,
-    payload:[]
+    payload:albums
   };
 }
 

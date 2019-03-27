@@ -11,7 +11,6 @@ const style= theme =>({
 })
 
 function SelectGaleria(props){
-  console.log(props.albums);
     const {albums} = props;
       const albumsD = albums;
       const lstAlbums = albumsD.map((album,i)=>(

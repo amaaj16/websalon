@@ -1,5 +1,5 @@
 import {type as findAlbum} from '../../redux/actions/findAlbum.js';
-import {allalbum} from '../../resolvers/resolver.js';
+//import {allalbum} from '../../resolvers/resolver.js';
 //import albums from '../../modelo.js';
 
 const defaultState= [];
@@ -7,11 +7,10 @@ const defaultState= [];
 
 
 
-function reducer (state = defaultState, {type}){
+function reducer (state = defaultState, {type,payload}){
   switch (type) {
     case findAlbum : 
-      return allalbum;
-
+      return payload;
     default:
       return state;
 
