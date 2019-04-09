@@ -18,13 +18,13 @@ class Albums extends Component{
 
   componentWillMount(){
     const micliente = new cliente('POST');
-    const query = micliente.query("{albums{name,to,photo }}");
+    const query = micliente.query("{getAlbums{name,to,photo }}");
     
     console.log(query.toString());
     const request = micliente.enviar(query);
     request.then(data=>{
-      console.log(data)
-      this.props.findAlbum(data.data.albums);
+      console.log(data.data)
+      this.props.findAlbum(data.data.getAlbums);
     });
      
   }
