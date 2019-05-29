@@ -1,11 +1,11 @@
 import React, { Component,Fragment } from 'react';
 import {Image} from 'react-bootstrap';
-import App from '../header/App.js';
+import App from '../header/App.jsx';
 import {connect} from 'react-redux';
 import currentAlbumId from '../../redux/actions/currentAlbumId.js';
 import ItemsGaleria from "./ItemsGaleria.js";
 import CssBaseline from '@material-ui/core/CssBaseline';
-import HeadGaleria from "../selectgaleria/HeadGaleris.js";
+import HeadGaleria from "../selectgaleria/HeadGaleris.jsx";
 import "./Galeria.css";
 class Galeria extends Component{
   constructor(props){

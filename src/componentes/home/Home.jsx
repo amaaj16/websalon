@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import Page from "./page.js";
-import App from '../header/App.js';
+import Page from "./page.jsx";
+import App from '../header/App.jsx';
 
 class Home extends Component{
 

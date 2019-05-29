@@ -1,11 +1,11 @@
 import React from "react";
 import { Route} from "react-router-dom";
-import Albums from './componentes/selectgaleria/index.js';
-import Home from './componentes/home/Home.js';
-import Paquetes from './componentes/paquetes/index.js';
-import Contacto from './componentes/contacto/Contacto.js';
-import Acerca from './componentes/acerca/Acerca.js';
-import Galeria from './componentes/galeria/Galeria.js';
+import Albums from './componentes/selectgaleria/index.jsx';
+import Home from './componentes/home/Home.jsx';
+import Paquetes from './componentes/paquetes/index.jsx';
+import Contacto from './componentes/contacto/Contacto.jsx';
+import Acerca from './componentes/acerca/Acerca.jsx';
+import Galeria from './componentes/galeria/Galeria.jsx';
 
 const Home_page = ({match}) => (
   <Home/>

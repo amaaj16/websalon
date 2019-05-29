@@ -1,6 +1,6 @@
 import React, { Component,Fragment } from 'react';
-import SelectGaleria from "./SelectGaleria.js";
-import App from '../header/App.js';
+import SelectGaleria from "./SelectGaleria.jsx";
+import App from '../header/App.jsx';
 import {connect} from 'react-redux';
 import findAlbum from '../../redux/actions/findAlbum.js';
 import {cliente} from '../../resolvers/resolver.js';

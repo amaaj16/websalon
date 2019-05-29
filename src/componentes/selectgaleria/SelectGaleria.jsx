@@ -4,7 +4,7 @@ import {Image,Container,Row,Col} from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import "../galeria/Galeria.css";
-import HeadGaleria from "./HeadGaleris.js";
+import HeadGaleria from "./HeadGaleris.jsx";
 const style= theme =>({
 
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar,Nav} from 'react-bootstrap';
-import Loader from '../loader/Loader.js';
+import Loader from '../loader/Loader.jsx';
 
 import './App.css';
 
