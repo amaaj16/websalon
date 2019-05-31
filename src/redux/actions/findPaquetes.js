@@ -1,9 +1,9 @@
 export const type = 'findPaquetes';
 
-const findPaquetes = () => {
+const findPaquetes = (paquetes) => {
   return {
     type,
-    payload:[]
+    payload:paquetes
   };
 }
 

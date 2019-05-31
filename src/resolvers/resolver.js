@@ -11,7 +11,7 @@ export class cliente {
      
 
     enviar(body){
-       return fetch('http://localhost:4000/graphql', {
+       return fetch('https://us-central1-backend-90c8e.cloudfunctions.net/api/graphql', {
         method:this.metodo,
         headers:this.headers,
         mode:this.mode,
@@ -24,7 +24,14 @@ export class cliente {
         return graphQL;
 
     }
-
+    ql(tag,...datos){
+        console.log(`consola:${tag}`);
+        let cadena = tag ,
+        separador= " ",
+        sinespacios =cadena.split(separador);
+        var graphQL= JSON.stringify({query:cadena});
+        return graphQL;
+    }
     mutation(){
 
     }
