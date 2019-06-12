@@ -18,7 +18,14 @@ class Albums extends Component{
 
   componentWillMount(){
     const micliente = new cliente('POST');
-    const query = micliente.query("{getAlbums{name,to,photo }}");
+    const query = micliente.ql(`
+    {
+      getAlbums{
+        name,
+        to,
+        photo 
+      }
+    }`);
     
     console.log(query.toString());
     const request = micliente.enviar(query);
